@@ -1,0 +1,6 @@
+{
+    "name": "Kart API - Prod",
+    "mail": {
+        "host":"prod-mail-host"
+    }
+}
