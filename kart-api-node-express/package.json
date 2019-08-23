@@ -2,20 +2,32 @@
   "name": "kart-api-node-express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "DEBUG=kart:* nodemon server.js",
+    "start": "node server.js",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed": "sequelize db:seed:all",
+    "test": "jest --watchAll verbose"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "config": "^3.2.2",
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "helmet": "^3.20.0",
     "joi": "^14.3.1",
     "morgan": "^1.9.1",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "sequelize": "^5.16.0",
+    "sequelize-cli": "^5.5.0",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1"
   }
 }
